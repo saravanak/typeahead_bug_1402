@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Typeahead</title>
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="styles/typeahead.css"> -->
+</head>
+<style type="text/css">
+.bs-example {
+  font-family: sans-serif;
+  position: relative;
+  margin: 100px;
+}
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  border: 2px solid #CCCCCC;
+  border-radius: 8px;
+  font-size: 24px;
+  height: 30px;
+  line-height: 30px;
+  outline: medium none;
+  padding: 8px 12px;
+  width: 396px;
+}
+
+.typeahead {
+  background-color: #FFFFFF;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097CF;
+}
+
+.tt-query {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+.tt-hint {
+  color: #999999;
+}
+
+.tt-dropdown-menu,
+.tt-menu {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 12px;
+  padding: 8px 0;
+  width: 422px;
+}
+
+.tt-suggestion {
+  font-size: 24px;
+  line-height: 24px;
+  padding: 3px 20px;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  background-color: #0097CF;
+  color: #FFFFFF;
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+</style>
+
+<body>
+  <form class="navbar-form" role="search">
+    <div class="input-group ">
+      <div>
+        <div class="icon-addon addon-lg u-posRelative">
+          <input type="text" id="demo-input" class="form-control input-lg typeahead" data-provide="typeahead" autocomplete="off" name="x" placeholder="I am looking for" />
+          <input type="hidden" name="search_param" value="all" id="search_param" />
+          <label for="email" class="glyphicon glyphicon-search input-lg" rel="tooltip" title="email"></label>
+        </div>
+        <div class="Typeahead-menu"></div>
+      </div>
+    </div>
+  </form>
+  <script id="result-template-terms" type="text/x-handlebars-template">
+    <div class="ProfileCard u-cf">
+      <h5>{{term}}</h5></div>
+  </script>
+  <script id="result-template-products" type="text/x-handlebars-template">
+    <div class="ProfileCard u-cf">
+      <div class="ProfileCard-details">
+        <div class="ProfileCard-realName">{{term}}</div>
+      </div>
+    </div>
+  </script>
+  <!-- /.container -->
+  <!-- Bootstrap core JavaScript
+         ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  <script src="scripts/handlebars-v4.0.2.js"></script>
+  <script src="scripts/typeahead.bundle.js"></script>
+  <script src="scripts/searchasyoutype.js"></script>
+</body>
+
+</html>
